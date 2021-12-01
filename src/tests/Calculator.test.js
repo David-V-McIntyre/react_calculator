@@ -19,7 +19,6 @@ describe('Calculator', () => {
   })
 
 
-// add() - add 1 to 4 and get 5
 
   it('should be able to add', () => {
     const button4 = container.find('#number4');
@@ -35,7 +34,6 @@ describe('Calculator', () => {
   })
 
 
-// subtract() subtract 4 from 7 and get 3
 
 it('should be able to subtract', () => {
   const button4 = container.find('#number4');
@@ -49,7 +47,6 @@ it('should be able to subtract', () => {
   const runningTotal = container.find('#running-total');
   expect(runningTotal.text()).toEqual('3');
 })
-// multiply() - multiply 3 by 5 and get 15
 
 it('should be able to multiply', () => {
   const button3 = container.find('#number3');
@@ -63,7 +60,6 @@ it('should be able to multiply', () => {
   const runningTotal = container.find('#running-total');
   expect(runningTotal.text()).toEqual('15');
 })
-// divide() - divide 21 by 7 and get 3
 
 it('should be able to divide', () => {
   const button2 = container.find('#number2');
@@ -79,7 +75,7 @@ it('should be able to divide', () => {
   const runningTotal = container.find('#running-total');
   expect(runningTotal.text()).toEqual('3');
 })
-// numberClick() - concatenate multiple number button clicks
+
 it('should be able to concatenate numbers', () => {
   const button4 = container.find('#number4');
   button4.simulate('click');
@@ -88,7 +84,6 @@ it('should be able to concatenate numbers', () => {
   const runningTotal = container.find('#running-total');
   expect(runningTotal.text()).toEqual('444');
 })
-// operatorClick() - chain multiple operations together
 
 it('should be able to chain operations', () => {
   const button1 = container.find('#number1');
@@ -115,7 +110,6 @@ it('should be able to chain operations', () => {
   expect(runningTotal.text()).toEqual('-150');
 })
 
-// clearClick() - clear the running total without affecting the calculation
 
 it('should be able to clear the running total without affecting the calculation', () => {
   const button4 = container.find('#number4');
@@ -136,6 +130,10 @@ it('should be able to clear the running total without affecting the calculation'
 })
 
 })
+
+
+
+
 
 
 

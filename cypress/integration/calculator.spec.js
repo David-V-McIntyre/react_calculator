@@ -8,7 +8,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '2')
   })
 
-// add() - add 1 to 4 and get 5
+
 
 it('should be able to add', () => {
   cy.get('#number1').click();
@@ -19,7 +19,7 @@ it('should be able to add', () => {
 })
 
 
-// subtract() subtract 4 from 7 and get 3
+
 
 it('should be able to subtract', () => {
   cy.get('#number4').click();
@@ -29,7 +29,7 @@ it('should be able to subtract', () => {
   cy.get('.display').should('contain', '3')
 })
 
-// multiply() - multiply 3 by 5 and get 15
+/
 it('should be able to multiply', () => {
   cy.get('#number3').click();
   cy.get('#operator-multiply').click();
@@ -37,7 +37,6 @@ it('should be able to multiply', () => {
   cy.get('#operator-equals').click();
   cy.get('.display').should('contain', '15')
 })
-// divide() - divide 21 by 7 and get 3
 
 it('should be able to divide', () => {
   cy.get('#number2').click();
@@ -47,9 +46,8 @@ it('should be able to divide', () => {
   cy.get('#operator-equals').click();
   cy.get('.display').should('contain', '3')
 })
-// numberClick() - concatenate multiple number button clicks
 
-it('should be able to oncatenate multiple number button clicks', () => {
+it('should be able to concatenate multiple number button clicks', () => {
   cy.get('#number4').click();
   cy.get('#number4').click();
   cy.get('#number4').click();
@@ -66,7 +64,6 @@ it('should be able to chain multiple operations together', () => {
   cy.get('.display').should('contain', '19')
 })
 
-// clearClick() - clear the running total without affecting the calculation
 it('should be able to clear the running total without affecting the calculation', () => {
   cy.get('#number2').click();
   cy.get('#operator_add').click();
@@ -79,7 +76,6 @@ it('should be able to clear the running total without affecting the calculation'
   cy.get('.display').should('contain', '6')
 })
 
-// Is the output as expected for a range of numbers (for example, positive, negative, decimals and very large numbers
 
 it('should output as expected for positive numbers', () => {
   cy.get('#number6').click();
@@ -128,7 +124,7 @@ it('should output an exception for impossible division', () => {
   cy.get('#operator-divide').click();
   cy.get('#number0').click();
   cy.get('#operator-equals').click();
-  cy.get('.display').should('contain', 'cannot divide by zero')
+  cy.get('.display').should('contain', 'Cannot divide by zero')
 })
 
 })

@@ -26,6 +26,8 @@ function App() {
     setRunningTotal(runningTotal + ".")
   }
 
+
+
   const clearClick = () => {
     if (runningTotal === 0) {
       setPreviousOperator(null);
@@ -81,7 +83,11 @@ function App() {
   }
 
   const divide = (number) => {
-    setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
+    if(number === 0){
+      setRunningTotal("Cannot divide by zero")
+    } else {
+      setRunningTotal(parseFloat(previousTotal) / parseFloat(number))
+    };
   }
 
 
